@@ -1,0 +1,31 @@
+
+
+/* Navbar */
+.dropdown-menu .lefty{
+	margin-left: 25px;
+}
+
+.dropdown .drop-back{
+	background-color: black;	
+}
+
+.dropdown-menu li a{
+	color: white;
+}
+
+.dropdown-menu li:hover span {
+	background-color: black;
+	color: white;
+}
+
+.dropdown-menu .badge-back{
+	background-color: white;
+	color: black;
+}
+
+#badge_message_nav{
+	background-color: #BC271C;
+	color: white;
+}
+
+/* FIN NAVBAR */
