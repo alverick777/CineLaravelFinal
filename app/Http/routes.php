@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Main.main');
-});
+Route::get('/',[
+	'uses' => 'MainController@index',
+	'as' => 'main.index'
+]);
 
 Route::group(['prefix' => 'admin'], function(){
 
@@ -27,5 +28,32 @@ Route::group(['prefix' => 'admin'], function(){
 			'uses' => 'usersController@destroy',
 			'as' => 'admin.users.destroy'
 	]);
+
+});
+
+Route::group(['prefix' => 'user'], function(){
+
+	Route::group(['middleware' => 'guest'], function(){	
+
+		Route::post('/signin',[
+			'uses' => 'usersController@postSignin',
+			'as' => 'users.signin'
+		]);
+
+	});
+
+	Route::group(['middleware' => 'auth'], function(){
+		Route::get('/profile',[
+			'uses' => 'usersController@getProfile',
+			'as' => 'users.profile'
+		]);	
+
+		Route::get('/logout',[
+			'uses' => 'usersController@getLogout',
+			'as' => 'users.logout'
+		]);
+		
+	});
+
 
 });
