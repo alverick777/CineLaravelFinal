@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/admin/adminIndex.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/user.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href=" {{ asset('css/font-awesome.min.css') }}">
@@ -40,6 +41,9 @@
   @yield('content')
 
   @include('partials.modals.sign_in')
+
+  <br><br>
+  @include('partials.footer')
 
    <!-- JQUERY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -9,7 +9,7 @@
 
 @section('content')	
 <div class="fondo">
-	<a href="{{ route('admin.index') }}">Admin</a>
+	
 </div>
 @endsection
 

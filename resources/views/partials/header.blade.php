@@ -15,8 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">        
           <li><a href="{{ route('main.index') }}"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li> 
-          <li><a href="#" data-toggle="modal" data-target="#modal_contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#modal_about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>  
+          <li><a href="#" data-toggle="modal" data-target="#modal_contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>          
+          <li><a href="#" data-toggle="modal" data-target="#modal_about"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li> 
+          @if(Auth::check())
+            <li><a href="{{ route('admin.index') }}"><i class="fa fa-cogs" aria-hidden="true"></i> Admin</a></li>
+          @endif
       </ul>  
     
       <ul class="nav navbar-nav navbar-right">      
